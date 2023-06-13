@@ -12,7 +12,7 @@ variable "policy_description" {
 variable "statements" {
   description = "A list of nested maps for the statements and elements required to build the IAM policy"
   type = list(object({
-    sid           = string
+    sid           = optional(string,"")
     effect        = string
     actions       = list(string)
     resources     = list(string)
